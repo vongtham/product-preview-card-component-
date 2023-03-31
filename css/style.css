@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500&display=swap');
+
+:root {
+
+    /* color */
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --verydarkblue: hsl(212, 21%, 14%);
+    --darkgrayishblue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* font */
+    --fraunces:'Fraunces', serif;
+    --montserrat: 'Montserrat', serif;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fraunces);
+    font-size: 14px;
+    background: var(--cream);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    margin: 15px;
+    position: relative;
+}
+
+p {
+    color: var(--darkgrayishblue);
+    font-family: var(--montserrat);
+}
+
+p,
+h1,
+span,
+a {
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+.product {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-col img {
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+.content-col {
+    background: var(--white);
+    padding: 28px;
+    height: auto;
+}
+
+.type {
+    letter-spacing: 4px;
+    font-family: var(--montserrat);
+}
+
+.content-col h1 {
+    font-size: 30px;
+    color: var(--verydarkblue);
+}
+
+.content-col p {
+    line-height: 20px;
+}
+
+.price-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sale-price {
+    font-size: 30px;
+    color: var(--darkcyan);
+    padding-right: 20px;
+}
+
+.normal-price {
+    color: var(--darkgrayishblue);
+    font-family: var(--montserrat);
+    text-decoration: line-through;
+    
+}
+
+button {
+    background: var(--darkcyan);
+    padding: 15px 0px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-weight: 700;
+
+}
+
+
+button img {
+    display: block;
+    width: 15px;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 376px) {
+
+    .product { 
+      display: flex;
+      flex-direction: row;
+      max-width: 550px;
+    }
+
+    .content-col {
+        flex-basis: 50%;
+    }
+
+    .image-col{
+        flex-basis: 50%;
+    }
+    
+    .image-col img {
+        border-radius: 20px 0 0 20px;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+
+
